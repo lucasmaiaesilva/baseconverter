@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Wed Jul 30 2014 00:10:22 GMT+0000 (UTC) -->
+<html data-wf-site="53d6e23a52c4eed16e4fc39a" lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Base Converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/code.css">
+  <link rel="stylesheet" type="text/css" href="css/base-converter.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/calculos.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Bitter:400,700,400italic","Great Vibes:400","Droid Sans:400,700"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/lucas.ico">
+</head>
+<body>
+  <header class="bg1">
+    <div class="w-container">
+      <h1>Base Converter</h1>
+      <h2>Convert your numbers to other Bases</h2>
+      <div class="w-form spacedown">
+        <form class="space" id="email-form" name="email-form" data-name="Email Form">
+          <div class="w-row space">
+            <div class="w-col w-col-1">
+              <label class="white right" for="field">Base:</label>
+            </div>
+            <div class="w-col w-col-5">
+              <select class="w-select" id="field" name="field">
+                <option value="">Select one...</option>
+                <option value="binary">Binary</option>
+                <option value="octal">Octal</option>
+                <option value="decimal">Decimal</option>
+                <option value="hexadecimal">Hexa Decimal</option>
+              </select>
+            </div>
+            <div class="w-col w-col-1">
+              <label class="white right" for="field-2">To Base:</label>
+            </div>
+            <div class="w-col w-col-5">
+              <select class="w-select" id="field-2" name="field-2">
+                <option value="">Select one...</option>
+                <option id="to-binary" value="binary">Binary</option>
+                <option id="to-octal" value="octal">Octal</option>
+                <option id="to-decimal" value="decimal">Decimal</option>
+                <option id="to-hexadecimal" value="hexadecimal">Hexa Decimal</option>
+              </select>
+            </div>
+          </div>
+          <div class="w-row">
+            <div class="w-col w-col-1">
+              <label class="white right" for="field-3">Type:</label>
+            </div>
+            <div class="w-col w-col-5">
+              <input class="w-input" id="numero" type="number" name="field-3" required="required">
+            </div>
+            <div class="w-col w-col-1">
+              <label class="white big" for="field-3">Result:&nbsp;</label>
+            </div>
+            <div class="w-col w-col-5">
+              <div class="white big" id="resultado"></div>
+            </div>
+          </div>
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form :(</p>
+        </div>
+      <!--<div style="text-align:center;">
+        <a href="#"><img src="images/btAppStore.svg" style="width:200px;"></a>
+      </div>-->
+
+      </div>
+
+    </div>
+
+  </header>
+  <div class="bg2">
+    <div class="w-container">
+      <div class="gray"><strong>Code:</strong>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <div data-ix="new-interaction">
+            <div class="code">
+              <pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Base Converter&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form&gt;
+    &lt;select id="field" name="field"&gt;
+      &lt;option value=""&gt;Select one...&lt;/option&gt;
+      &lt;option value="frombinary"&gt;Binary&lt;/option&gt;
+      &lt;option value="fromoctal"&gt;Octal&lt;/option&gt;
+      &lt;option value="fromdecimal"&gt;Decimal&lt;/option&gt;
+      &lt;option value="fromhexadecimal"&gt;Hexa Decimal&lt;/option&gt;
+    &lt;/select&gt;
+      &lt;select id="field-2" name="field-2"&gt;
+        &lt;option value=""&gt;Select one...&lt;/option&gt;
+        &lt;option id="tobinary" value="binario"&gt;Binary&lt;/option&gt;
+        &lt;option id="tooctal" value="octal"&gt;Octal&lt;/option&gt;
+        &lt;option id="todecimal" value="decimal"&gt;Decimal&lt;/option&gt;
+        &lt;option id="tohexadecimal" value="hexadecimal"&gt;Hexa Decimal&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;input type="number" placeholder="type" id="number"&gt;
+      &lt;p&gt;Result: &lt;b id="result"&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code> 
+              </pre>
+             </div>
+          </div>
+        </div>
+        <div class="w-col w-col-6">
+          <div class="code">
+            <pre>
+<code>function myFunc(theObject) {
+  theObject = {make: "Ford", model: "Focus", year: 2006};
+}
+
+var mycar = {make: "Honda", model: "Accord", year: 1998},
+    x,
+    y;
+
+x = mycar.make;     // x gets the value "Honda"
+
+myFunc(mycar);
+y = mycar.make;     // y still gets the value "Honda" 
+</code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg3">
+    <div class="white paddingm">Developed By Lucas Maia e Silva<img src="images/lucas.svg" style="margin-left:7px; width:100px" </div>
+  </footer>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>

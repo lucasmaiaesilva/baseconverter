@@ -1,0 +1,159 @@
+body {
+ font-family: Bitter, serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+h1 {
+  margin-top: 39px;
+  margin-bottom: 27px;
+  padding-top: 0px;
+  font-family:'Great Vibes', cursive;
+  color: white;
+  font-size: 62px;
+  line-height: 44px;
+  font-weight: 700;
+  text-align: center;
+}
+h2 {
+  margin-top: 22px;
+  margin-bottom: 29px;
+  background-color: transparent;
+  color: white;
+  font-size: 19px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.bg1 {
+  border-bottom: 1px solid #001b2b;
+  background-color: #2364a1;
+  background-image: url('../images/extra-bg.jpg');
+}
+.white {
+  font-family:'Droid Sans', sans-serif;
+  color: white;
+}
+.white.big {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: right;
+}
+.white.right {
+  text-align: right;
+}
+.white.result {
+  font-size: 22px;
+}
+.white.paddingm {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+.space {
+  margin-top: 7px;
+  margin-bottom: 17px;
+}
+.containerspace {
+  margin-bottom: 32px;
+}
+.spacedown {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.code {
+  border-left: 6px solid #00539f;
+  background-color: rgba(212, 221, 228, 0.49);
+  background-image: url('../images/blueprint-dark.png');
+}
+.bg2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.bg3 {
+  background-color: #383a3b;
+}
+.gray {
+  margin-bottom: 11px;
+  font-size: 22px;
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  .white.right {
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 53px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .white.big {
+    margin-top: 22px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+  .white.right {
+    text-align: left;
+  }
+  .code {
+    margin-bottom: 38px;
+  }
+}
+@media (max-width: 479px) {
+  h1 {
+    font-size: 46px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .white.right {
+    text-align: left;
+  }
+}
